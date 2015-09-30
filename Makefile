@@ -46,7 +46,7 @@ clean-test:
 	rm -fr htmlcov/
 
 lint:
-	flake8 defaults tests
+	flake8 defaultsob tests
 
 test:
 	python setup.py test
@@ -55,15 +55,15 @@ test-all:
 	tox
 
 coverage:
-	coverage run --source defaults setup.py test
+	coverage run --source defaultsob setup.py test
 	coverage report -m
 	coverage html
 	$(BROWSER) htmlcov/index.html
 
 docs:
-	rm -f docs/defaults.rst
+	rm -f docs/defaultsob.rst
 	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ defaults
+	sphinx-apidoc -o docs/ defaultsob
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 	$(BROWSER) docs/_build/html/index.html

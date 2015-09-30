@@ -23,23 +23,23 @@ test_requirements = [
 ]
 
 setup(
-    name='defaults',
+    name='defaultsob',
     version='0.1.0',
-    description="A simple package to create data structures with defaults",
+    description="A simple package to create data structures with defaultsob",
     long_description=readme + '\n\n' + history,
     author="Hone Watson",
     author_email='comments@hone.be',
-    url='https://github.com/honewatson/defaults',
+    url='https://github.com/honewatson/defaultsob',
     packages=[
-        'defaults',
+        'defaultsob',
     ],
-    package_dir={'defaults':
-                 'defaults'},
+    package_dir={'defaultsob':
+                 'defaultsob'},
     include_package_data=True,
     install_requires=requirements,
     license="ISCL",
     zip_safe=False,
-    keywords='defaults,data structures,objects',
+    keywords='defaultsob,data structures,objects',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',

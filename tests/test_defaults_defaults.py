@@ -3,7 +3,7 @@ import sys
 topdir = os.path.join(os.path.dirname(__file__), "..")
 sys.path.append(topdir)
 import unittest
-from defaults import core
+from defaultsob import core
 
 
 class Simple(core.Defaults):
