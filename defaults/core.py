@@ -51,7 +51,17 @@ def use_if_none(alternative_attr, original_attr, ob, kwargs):
     """
     return kwargs.get(original_attr, getattr(ob, alternative_attr, None))
 
-use_name_if_none = toolz.curry(use_if_none, "Name")
+def usef(attr):
+    """Use another value as default
+
+    @param attr: the name of the attribute to
+                use as alternative value
+    @return: value of alternative attribute
+
+    """
+    return toolz.curry(use_if_none, attr)
+
+use_name_if_none = usef('Name')
 
 
 def choose_alt(attr, ob, kwargs):
