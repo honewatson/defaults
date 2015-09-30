@@ -19,7 +19,7 @@ requirements = [
 ]
 
 test_requirements = [
-    # TODO: put package test requirements here
+    'toolz>=0.7.4'
 ]
 
 setup(
