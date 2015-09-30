@@ -18,6 +18,7 @@ Features
 --------
 
    .. code-block:: python
+      
       class User(Defaults):
           __slots__ = [
              "name",
@@ -58,4 +59,4 @@ Features
          "name": "Billy",
          "description": "The Kid"
       }
-
+      
