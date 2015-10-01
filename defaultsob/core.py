@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import toolz
 
 
 def ordered_set(iter):
@@ -37,19 +36,22 @@ def class_slots(ob):
     return current_class.allslots
 
 
-def use_if_none(alternative_attr, original_attr, ob, kwargs):
-    """
-    Try and get a value from kwargs for original_attr.  If there
-    is no original_attr in kwargs use the alternative_attr value 
-    in the object ob
+def use_if_none_cls(alternative_attr):
+    def use_if_none(original_attr, ob, kwargs):
+        """
+        Try and get a value from kwargs for original_attr.  If there
+        is no original_attr in kwargs use the alternative_attr value 
+        in the object ob
 
-    @param alternative_attr: the alternative attribute 
-    @param original_attr: the original attribute
-    @param ob: the object with the attributes 
-    @param kwargs: key values
-    @return: final value 
-    """
-    return kwargs.get(original_attr, getattr(ob, alternative_attr, None))
+        @param alternative_attr: the alternative attribute 
+        @param original_attr: the original attribute
+        @param ob: the object with the attributes 
+        @param kwargs: key values
+        @return: final value 
+        """
+        return kwargs.get(original_attr, getattr(ob, alternative_attr, None))
+    return use_if_none
+
 
 def usef(attr):
     """Use another value as default
@@ -59,7 +61,7 @@ def usef(attr):
     @return: value of alternative attribute
 
     """
-    return toolz.curry(use_if_none, attr)
+    return use_if_none_cls(attr)
 
 use_name_if_none = usef('Name')
 
@@ -113,4 +115,8 @@ class Defaults(object):
         are not included
         @return: dict of the object properties with values
         """
-        return toolz.valfilter(lambda x: x, self.to_dict())
+        attribs = self.to_dict()
+        return {
+            k: v
+            for k, v in attribs.items() if v
+        }

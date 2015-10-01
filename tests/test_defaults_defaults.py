@@ -39,7 +39,7 @@ class TestUseIfNone(unittest.TestCase):
     def test_use_if_none(self):
         simple = Simple()
         self.assertEqual(simple.Additional, None)
-        value = core.use_if_none('Name', 'Additional', simple, {})
+        value = core.usef('Name')('Additional', simple, {})
         self.assertEqual(value, "Buzz")
 
 

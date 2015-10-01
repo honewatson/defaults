@@ -15,11 +15,9 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read().replace('.. :changelog:', '')
 
 requirements = [
-    'toolz>=0.7.4'
 ]
 
 test_requirements = [
-    'toolz>=0.7.4'
 ]
 
 setup(
