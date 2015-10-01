@@ -22,7 +22,7 @@ test_requirements = [
 
 setup(
     name='defaultsob',
-    version='0.2.1',
+    version='0.2.2',
     description="A simple package to create data structures with defaultsob",
     long_description=readme + '\n\n' + history,
     author="Hone Watson",
