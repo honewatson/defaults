@@ -22,7 +22,7 @@ test_requirements = [
 
 setup(
     name='defaultsob',
-    version='0.2.3',
+    version='0.3.0',
     description="A simple package to create data structures with defaultsob",
     long_description=readme + '\n\n' + history,
     author="Hone Watson",
@@ -44,11 +44,7 @@ setup(
         'License :: OSI Approved :: ISC License (ISCL)',
         'Natural Language :: English',
         "Programming Language :: Python :: 2",
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
     ],
     test_suite='tests',
     tests_require=test_requirements
