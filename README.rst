@@ -2,17 +2,17 @@
 defaultsob
 ===============================
 
-.. image:: https://img.shields.io/travis/honewatson/defaults.svg
-        :target: https://travis-ci.org/honewatson/defaults
+.. image:: https://img.shields.io/travis/honewatson/defaultsob.svg
+        :target: https://travis-ci.org/honewatson/defaultsob
 
-.. image:: https://img.shields.io/pypi/v/defaults.svg
-        :target: https://pypi.python.org/pypi/defaults
+.. image:: https://img.shields.io/pypi/v/defaultsob.svg
+        :target: https://pypi.python.org/pypi/defaultsob
 
 
 A simple package to create data structures with defaults and strict limitations of attributes/properties.
 
 * Free software: ISC license
-* Documentation: https://defaults.readthedocs.org.
+* Documentation: https://defaultsob.readthedocs.org.
 
 Features
 --------
